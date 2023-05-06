@@ -21,20 +21,18 @@
        padding: 10px;
        border-radius: 20px;
        box-shadow: 1px 15px 20px 5px  black;
-       /* border-color:var(--border-color)    ; */
+       
        width: 60vw;
        max-width: 500px;   
        
    
    }
    
-   .jokes  {
-       font-size: 1.5rem;
-   
-   }
+  
    
    
     .Head h1{
+        margin: 10px 0;
        text-align: center;
        background-color: var(--bg-color);
        color: white;
@@ -44,6 +42,18 @@
        
    }
    
+
+   .jokes  {
+    font-size: 1.5rem;
+    padding: 10px;
+    margin:10px;
+    color: black;
+    text-align: center;
+
+}
+
+
+
    .icon{
        max-width: 50px;
    }
@@ -52,10 +62,12 @@
    }
    
    .btns{
-       display: flex;
-       justify-content: end;
-   }
    
+    display: flex;
+    justify-content: space-around;
+   }
+  
+  
    .btn{
    
    font-family: Roboto, sans-serif;
@@ -65,8 +77,6 @@
    padding: 10px 30px;
    border: solid #9384c5 2px;
    border-radius: 50px;
-   display: flex;
-   flex-direction:row;
    align-items: center;
    cursor: pointer;
    
