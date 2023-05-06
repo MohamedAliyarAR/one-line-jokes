@@ -1,10 +1,12 @@
 let Gbtn =document.getElementById('gbtn');
-let wa = document.getElementById("wa");
+let wa = document.getElementById("whatsapp");
 let copy = document.getElementById("copy");
 let printJoke = document.getElementById('disjoke');
 let url = 'https://icanhazdadjoke.com';
-
+var joke='loading!!!';
+printJoke.innerHTML=joke;
 Gbtn.addEventListener('click',fetchTheJoke);
+
 async function fetchTheJoke(){
 
     const jokes={
@@ -12,15 +14,27 @@ async function fetchTheJoke(){
         'Accept':'Application/json',
     }
     }
-const response =  fetch(url,jokes).then( response=>{
+const response = await fetch(url,jokes).then( response=>{
     return response.json() ;
 }).then(data=>{
-    // console.log(data.joke);
-     var joke = data.joke;
+
+      joke = data.joke;
     printJoke.innerHTML = joke;
 }).catch(error=>{
     printJoke.innerHTML = "Try again";
 })
 
-  
 }
+fetchTheJoke();
+
+copy.addEventListener('click',()=>{
+    navigator.clipboard.writeText(joke);
+    console.log(joke);
+})
+
+wa.addEventListener('click',()=>{
+    let url = `https://api.whatsapp.com/send/?text=${joke}`;
+    open(url,'_blank')
+    
+})
+
