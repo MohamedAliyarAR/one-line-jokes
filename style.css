@@ -9,19 +9,22 @@
    
    
    body {
-   background-color: var(--bg-color);
+    
+   background-color: var(--bg-color); 
    min-height: 100vh;
    display:flex;
    justify-content: center;
    align-items: center;
-   }
+   
+}
+
+
    .container{
      
        background-color: #fff;
        padding: 10px;
        border-radius: 20px;
        box-shadow: 1px 15px 20px 5px  black;
-       
        width: 60vw;
        max-width: 500px;   
        
@@ -32,8 +35,10 @@
    
    
     .Head h1{
+
         margin: 10px 0;
        text-align: center;
+       font-family: 'Darumadrop One', cursive;
        background-color: var(--bg-color);
        color: white;
        font-size: 3rem;
@@ -44,21 +49,26 @@
    
 
    .jokes  {
+
     font-size: 1.5rem;
     padding: 10px;
     margin:10px;
     color: black;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
 
 }
 
 
 
    .icon{
+
        max-width: 50px;
        cursor: pointer
+
     }
    .icon1{
+
        max-width: 40px;
        cursor: pointer;
    }
@@ -67,6 +77,7 @@
    
     display: flex;
     justify-content: space-around;
+
    }
   
   
